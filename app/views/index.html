@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset='utf-8'>
+
+	<title>NoteSter</title>
+	
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <link rel="stylesheet" href="css/application.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+	<script >
+		$(document).ready(function() {     
+			$.getJSON( "js/test.json", function( data ) {
+				$.each( data, function( key, val ) {
+					
+					$('#childrenList').append("<li>" + val.title +"</li>" );
+					$('#tagList').append("<li>" + val.title +"</li>" );
+					$('#categoryList').append("<li>" + val.title +"</li>" );
+				});
+			});
+
+			$.getJSON( "js/note.json", function( data ) {
+			//var item = data[Math.floor(Math.random()*data.length)];
+				$.each( data, function( key, val ) {
+					$('#noteTitle').append( val.title );
+					$('#noteDescription').append( val.description  );
+				});
+			});
+		});
+
+	</script>
+    
+  </head>
+
+  <body>
+	<div class="nav">
+      <div class="container">
+        <ul class="pull-left">
+          <li><a href="index.html"><img src="images/logo.png">LOGO</a></li>
+          <li><input class="input-box" id="name" placeholder="  Search notes" style="margin-left:100px"></li>
+          <li><button style="margin-left:5px" type="button" class="btn">GO</li>
+          
+          
+        </ul>
+        
+      </div>
+    </div>
+	
+	<!--<div class="header">
+		<div class="logo-img"><img src="images/logo.png">LOGO</div>
+		<div >
+			<input class="input-box" id="name" placeholder="  Search notes" >
+		</div>
+		<button style="margin-left:5px" type="button" class="btn">GO</button>
+	</div>-->
+	
+	<div class="jumbotron" align="center">
+      <div class="container">
+		<h1 id="noteTitle"></h1>
+        <p id="noteDescription"></p>
+	  </div>
+	 </div>
+	
+    <div class="neighborhood-guides">
+       <div class="container" id="projects">
+
+             <div class="col-md-4">
+                <div class="thumbnail">
+					<h3>Related</h3>
+					<div class="childrenInfo">
+						<a href="#"><li id="childrenList"></li></a>
+					</div>
+                </div>
+            </div>
+
+             <div class="col-md-4">
+                <div class="thumbnail">
+					<h3>Tags</h3>
+					<div class="tagInfo">
+						<a href="#"><li id="tagList"></li></a>
+						
+					</div>
+                </div>
+            </div>
+
+             <div class="col-md-4">
+                <div class="thumbnail">
+					<h3>Categories</h3>
+					<div class="categoryInfo">
+						<a href="#"><li id="categoryList"></li></a>
+					</div>
+                </div>
+            </div>
+
+
+      </div><br><br>
+        
+    </div>
+    
+    <div class="footer">
+	  <div class="container">
+		<div class="row">
+	      <div class="col-md-4">
+			<h3>About</h3>
+			<p>We are awesome, check our stuff out.</p>
+
+	      </div>
+		  <div class="col-md-4">
+			<h3> Connect</h3>
+			<ul >
+				<li class="social-link"><a href="https://twitter.com"><img class="social-icon" src="images/twitter.png" >Twitter</a></li>
+				<li class="social-link"><a href="https://www.linkedin.com"><img class="social-icon" src="images/linkedin.png" >LinkedIn</a></li>
+				<li class="social-link"><a href="https://facebook.com"><img class="social-icon" src="images/facebook.png" >Facebook</a></li>
+				
+			</ul>
+				
+		   </div>
+
+		  <div class="col-md-4">
+			<h3> Help</h3>
+			<ul >
+				<li><a href="#">Contact us</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Feedback</a></li>
+				</ul>
+		  </div>
+		  
+	    </div>
+		<p style="float:left">&copy; DBC NoteSter 2015</p>
+	  </div>
+	</div>
+	<script type="text/javascript">
+		$('ul.pull-left').find('a').click(function(){
+			var $href = $(this).attr('href');
+			var $anchor = $($href).offset();
+			$('body').animate({ scrollTop: $anchor.top });
+			return false;
+		});
+	
+	</script>
+	
+  </body>
+</html>
