@@ -3,7 +3,7 @@ $(document).ready(function() {
 		$.each( data, function( key, val ) {
 			$('#list').append(
 				'<li>\
-							<div id = "card'+val.id+'" class="panel">\
+							<div id=\"card' + val.id + '\" class="panel">\
 													<div class="panel-heading">\
 																<div id="headerText" class="pull-left">\
 																			<h3 class="title">' + val.title + '</h3>\
@@ -14,7 +14,7 @@ $(document).ready(function() {
 																						<button id = "upVoteButton">' +
 																									'<span class = "glyphicon glyphicon-thumbs-up thumb upDownVote" aria-hidden="true"> </span>\
 																						</button>\
-																						<button id = upButton>\
+																						<button id = downVoteButton>\
 																						<span class = "glyphicon glyphicon-thumbs-down thumb upDownVote" aria-hidden="true"></span>\
 																						</button>\
 																</div>\
@@ -25,8 +25,47 @@ $(document).ready(function() {
 							</div>\
 				</li>'
 			);
+			
+			
 			//begin event handler
-			$("#card" + val.id).find("voteCount")
+			var voteContainer = $("#card" + val.id).find(".upDownVote");
+			
+			//var isUp = false;
+			//var isDown = false;
+
+			voteContainer.find("#upVoteButton").click(function(evt){
+			  var btn = evt.currentTarget; // the clicked button
+			  console.log("up:" + evt.currentTarget);
+			  
+			  /*
+			  if(!isUp){
+			  val.votes++;
+			  isUp = true;
+			  }
+			  else{
+				val.votes--;
+				isUp = false;
+			  }
+			  $("#voteCount").text(val.votes);
+			  */
+			});
+
+			voteContainer.find("#downVoteButton").click(function(evt){
+			  var btn = evt.currentTarget; // the clicked button
+			  console.log("down:" + evt.currentTarget);
+			  
+			  /*
+			  if(!isDown){
+			  val.votes--;
+			  isDown = true;
+			  }
+			  else{
+				val.votes++;
+				isDown = false;
+			  } 
+			  $("#voteCount").text(val.votes);
+			  */
+			});
 		});
 	});
 	
