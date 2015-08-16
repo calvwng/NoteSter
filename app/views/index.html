@@ -3,12 +3,11 @@
 <html>
 
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	   <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css">
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
     <link rel="stylesheet" href="main.css">
-
   </head>
 
   <body>
@@ -25,43 +24,53 @@
         <h1>NoteSter</h1>
       </div>
     </div>
-	<div class = "container">
-    <div class = "neighborhood-guides">
-        <div class = "container">
-			<ul id="list"></ul>
-			<script>
-			$(document).ready(function() {
-				$.getJSON( "test.json", function( data ) {
-					$.each( data, function( key, val ) {
-						$('#list').append(
-						'<li><h2><a id = "resourceTitle" href = # class = "title pull-left col-lg-12">' + val.title +'</a></h2><br><h3><a href="#" class = "authorName pull-left col-lg-12">'+val.author+'</a></h3>'+
-						'<div class = "upDownVote col-md-2 pull-right"><div id = "voteCount" class = "tally ">' + val.votes +
-						'</div><a id = "upVoteButton" href = "#"><span class = "glyphicon glyphicon-thumbs-up thumb upDownVote" aria-hidden="true"> </span>'+
-					'</a><a id = "downVoteButton" href = "#"><span class = "glyphicon glyphicon-thumbs-down thumb upDownVote" aria-hidden="true"></span></a>'
-					+ '</div>'+ '<p class = "col-sm-10 desc pull-left">'+val.description.slice(0,255)+'...<a href="#" class = "">Read More</a></p>' +
-					'</li>');
-					});
-				});
-			});
-			</script>
 
-			<!--<ul>
-			<li><a id = "resourceTitle" href = # class = "title col-md-4">Resource 1</a></li>
-			<div class = "upDownVote col-md-2"><div id = "voteCount" class = "tally ">10</div>
+	   <div class = "container">
+       <div class = "neighborhood-guides">
+          <div class = "container">
+          			<ul id="list"></ul>
+          			<script>
+          			$(document).ready(function() {
+          				$.getJSON( "test.json", function( data ) {
+          					$.each( data, function( key, val ) {
+          						$('#list').append(
+          						'<li>' +
+                    '<h2><a id = "resourceTitle" href = # class = "title pull-left col-lg-12">' + val.title +'</a></h2><br>' +
+                    '<h3><a href="#" class = "authorName pull-left col-lg-12">'+val.author+'</a></h3>'+
+              						'<div class = "upDownVote col-md-2 pull-right">' +
+                       '<div id = "voteCount" class = "tally ">' + val.votes + '</div>' +
+                          '<a id = "upVoteButton" href = "#">' +
+                             '<span class = "glyphicon glyphicon-thumbs-up thumb upDownVote" aria-hidden="true"> </span>'+
+             					        '</a>' +
+                          '<a id = "downVoteButton" href = "#">' +
+                             '<span class = "glyphicon glyphicon-thumbs-down thumb upDownVote" aria-hidden="true"></span>' +
+                           '</a>' +
+           					    '</div>' +
+                    '<p class = "col-sm-10 desc pull-left">'+val.description.slice(0,255)+'...<a href="#" class = "">Read More</a></p>' +
+          					 '</li>');
+          					});
+          				});
+          			});
+          			</script>
 
-				<a id = "upVoteButton" href = "#">
-					<span class = "glyphicon glyphicon-thumbs-up thumb upDownVote" aria-hidden="true"></span>
-					</a>
-				<a id = "downVoteButton" href = "#">
-					<span class = "glyphicon glyphicon-thumbs-down thumb upDownVote" aria-hidden="true"></span>
-				</a>
-				<li><a href="#" class = "authorName">Author</a></li>
-			</div>
+          			<!--<ul>
+          			<li><a id = "resourceTitle" href = # class = "title col-md-4">Resource 1</a></li>
+          			<div class = "upDownVote col-md-2"><div id = "voteCount" class = "tally ">10</div>
 
-			<p class = col-md-12>Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Sure would be rad if you read the rest of this resource...</p>
-			<a href="#" class = "col-md-2">Read More</a>
-            </ul>-->
-        </div>
-    </div>
+          				<a id = "upVoteButton" href = "#">
+          					<span class = "glyphicon glyphicon-thumbs-up thumb upDownVote" aria-hidden="true"></span>
+          					</a>
+          				<a id = "downVoteButton" href = "#">
+          					<span class = "glyphicon glyphicon-thumbs-down thumb upDownVote" aria-hidden="true"></span>
+          				</a>
+          				<li><a href="#" class = "authorName">Author</a></li>
+          			</div>
+
+          			<p class = col-md-12>Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Sure would be rad if you read the rest of this resource...</p>
+          			<a href="#" class = "col-md-2">Read More</a>
+                      </ul>-->
+           </div>
+       </div>
+     </div>
   </body>
 </html>
