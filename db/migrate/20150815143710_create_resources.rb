@@ -4,6 +4,7 @@ class CreateResources < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.binary :file
+      t.references :user
 
       t.timestamps
     end

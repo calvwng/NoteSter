@@ -1,13 +1,13 @@
 class Resource < ActiveRecord::Base
   # Remember to create a migration!
-
+ belongs_to :user
   #Parent of many children trhrough foreign key
   has_many :child_relations, foreign_key: :parent_id, class_name: "Relation"
-  has_many :children, through: child_relations, source: :parent
+  has_many :children, through: :child_relations, source: :parent
 
 #Child of many parents through foreign key
   has_many :parent_relations, foreign_key: :child_id, class_name: "Relation"
-  has_many :parents, through: parent_relations, source: :child
+  has_many :parents, through: :parent_relations, source: :child
 
   has_many :resource_categories
   has_many :categories, through: :resource_categories
