@@ -12,6 +12,45 @@
 	font-size: 20pt;
 }
 
+.nav{
+	padding-top:10px;
+}
+
+
+.nav li {
+  display: inline;
+}
+
+.jumbotron{
+background-color:#3399cc !important;
+color: #fff !important;
+border: 0px solid #3399cc;
+border-radius: 10px;
+}
+
+.logo-img{
+	width:10%;
+	height:10%;
+	display: inline-block;
+}
+.btn{
+	font-weight:bold;
+	color:#fff;
+	background-color: #3399cc;	
+	overflow: hidden;
+	height:42px;
+}
+
+.input-box{
+	padding: 9px;
+	border: 2px solid #3399cc;
+	border-radius: 5px;
+	width: 700px;
+	font-size:14px;
+	display: inline-block;
+	overflow: hidden;
+}
+
 .thumb{
 	position: relative;
 	margin-bottom: 10px;
