@@ -19,19 +19,23 @@
 				$.each( data, function( key, val ) {
 					
 					$('#childrenList').append("<li>" + val.title +"</li>" );
-					$('#tagList').append("<li>" + val.title +"</li>" );
+					$('#tagList').append("<li>#" + val.title +"</li>" );
 					$('#categoryList').append("<li>" + val.title +"</li>" );
 				});
 			});
 
 			$.getJSON( "js/note.json", function( data ) {
-			//var item = data[Math.floor(Math.random()*data.length)];
 				$.each( data, function( key, val ) {
 					$('#noteTitle').append( val.title );
 					$('#noteDescription').append( val.description  );
 				});
 			});
 		});
+		/*$('#jumbotron, #scrollbar').enscroll({
+			showOnHover: false,
+			verticalTrackClass: 'track3',
+			verticalHandleClass: 'handle3'
+		});*/
 
 	</script>
     
@@ -51,54 +55,48 @@
       </div>
     </div>
 	
-	<!--<div class="header">
-		<div class="logo-img"><img src="images/logo.png">LOGO</div>
-		<div >
-			<input class="input-box" id="name" placeholder="  Search notes" >
-		</div>
-		<button style="margin-left:5px" type="button" class="btn">GO</button>
-	</div>-->
 	
-	<div class="jumbotron" align="center">
-      <div class="container">
-		<h1 id="noteTitle"></h1>
-        <p id="noteDescription"></p>
-	  </div>
+	<div class="jumbotron" >
+		<!--<div id="scrollbar"></div>-->
+			<div class="container">
+			<h1 id="noteTitle"></h1>
+			<p id="noteDescription"></p>
+			
+		  </div>
+		
 	 </div>
 	
-    <div class="neighborhood-guides">
-       <div class="container" id="projects">
+    <div class="info-tabs">
+       <div class="container">
 
-             <div class="col-md-4">
-                <div class="thumbnail">
-					<h3>Related</h3>
+             <div class="col-md-4 info-tab">
+
+					<legend>Related</legend>
 					<div class="childrenInfo">
 						<a href="#"><li id="childrenList"></li></a>
 					</div>
-                </div>
+
             </div>
 
-             <div class="col-md-4">
-                <div class="thumbnail">
-					<h3>Tags</h3>
+             <div class="col-md-4 info-tab">
+
+					<legend>Tags</legend>
 					<div class="tagInfo">
-						<a href="#"><li id="tagList"></li></a>
-						
+						<a href="#"><li id="tagList"></li></a>						
 					</div>
-                </div>
+
             </div>
 
-             <div class="col-md-4">
-                <div class="thumbnail">
-					<h3>Categories</h3>
+             <div class="col-md-4 info-tab">  
+
+					<legend>Categories</legend>
 					<div class="categoryInfo">
 						<a href="#"><li id="categoryList"></li></a>
 					</div>
-                </div>
+
             </div>
 
-
-      </div><br><br>
+      </div>
         
     </div>
     
@@ -134,15 +132,7 @@
 		<p style="float:left">&copy; DBC NoteSter 2015</p>
 	  </div>
 	</div>
-	<script type="text/javascript">
-		$('ul.pull-left').find('a').click(function(){
-			var $href = $(this).attr('href');
-			var $anchor = $($href).offset();
-			$('body').animate({ scrollTop: $anchor.top });
-			return false;
-		});
 	
-	</script>
 	
   </body>
 </html>

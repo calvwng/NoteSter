@@ -1,3 +1,5 @@
+
+
 .nav a, .nav .open>a, .nav .open>a:hover, .nav .open>a:focus{
   color: #5a5a5a;
   font-size: 11px;
@@ -61,12 +63,16 @@ border-radius: 4px 4px 0 0;
 }
 .jumbotron{
 	background-color:#3399cc;
-  height: 330px;
- 
-  border: 2px solid #3399cc;
+	height: 330px;
+	border: 2px solid #3399cc;
 	border-radius: 10px;
-	
+	overflow-y: scroll;
   
+}
+#scrollbar{
+	overflow: auto;
+
+
 }
 
 .jumbotron .container {
@@ -87,32 +93,32 @@ border-radius: 4px 4px 0 0;
   color: #fff;
 }
 
-.note-div{
-	width:100%;
-	height:500px;
-	
-}
-
-.neighborhood-guides{
+.info-tabs{
     background-color: #efefef;
     border-bottom: 1px solid #dbdbdb;
-	
-
+	padding-bottom:15px;
 }
 
-.neighborhood-guides h2{
+.info-tabs h2{
     color: #393c3d;
     font-size: 24px;
 }
 
-.neighborhood-guides p{
+.info-tabs p{
     font-size: 15px;
     margin-bottom: 13px;
+}
+.info-tabs {
+	/*border: 2px solid #787676;*/
+	
+}
+legend{
+	margin-top:10px;
+	margin-bottom:5px;
 }
 
 .footer {
 	background-color: #f7f7f7;
-
 }
 
 .footer h3 {
@@ -120,10 +126,7 @@ border-radius: 4px 4px 0 0;
 	font-size: 18px;
 	font-weight: bold;
 }
-.thumbnail h3{
-	border
-	background-color:#fff;
-}
+
 
 .thumbnail img, .social-icon{
 	transition: transform 0.3s ease-in-out;
@@ -190,4 +193,34 @@ a.fancybox:hover img {
 	z-index: 999;
 	-o-transform: scale(1.02,1.02); -ms-transform: scale(1.02,1.02); -moz-transform: scale(1.02,1.02); -webkit-transform: scale(1.02,1.02); 
 	transform: scale(1.02,1.02);
+}
+
+.track3 {
+    width: 10px;
+    background: rgba(0, 0, 0, 0);
+    margin-right: 2px;
+    border-radius: 10px;
+    -webkit-transition: background 250ms linear;
+    transition: background 250ms linear;
+}
+
+.track3:hover,
+.track3.dragging {
+    background: #d9d9d9; 
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.handle3 {
+    width: 7px;
+    right: 0;
+    background: #999;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 7px;
+    -webkit-transition: width 250ms;
+    transition: width 250ms;
+}
+
+.track3:hover .handle3,
+.track3.dragging .handle3 {
+    width: 10px;
 }
