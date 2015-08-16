@@ -5,8 +5,6 @@
   <meta charset='utf-8'>
 
 	<title>NoteSter</title>
-	
-    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
     <link rel="stylesheet" href="css/application.css">
@@ -19,7 +17,7 @@
 				$.each( data, function( key, val ) {
 					
 					$('#childrenList').append("<li>" + val.title +"</li>" );
-					$('#tagList').append("<li>#" + val.title +"</li>" );
+					$('#tagList').append("#" + val.title +" " );
 					$('#categoryList').append("<li>" + val.title +"</li>" );
 				});
 			});
@@ -45,11 +43,11 @@
 	<div class="nav">
       <div class="container">
         <ul class="pull-left">
-          <li><a href="index.html"><img src="images/logo.png">LOGO</a></li>
-          <li><input class="input-box" id="name" placeholder="  Search notes" style="margin-left:100px"></li>
+          <li><a href="index.html"><img class="logo-img" src="images/NoteStrIcon.png"></a></li>
+          <li><input class="input-box" id="name" placeholder="  Search notes" style="margin-left:50px"></li>
           <li><button style="margin-left:5px" type="button" class="btn">GO</li>
           
-          
+        
         </ul>
         
       </div>
@@ -69,12 +67,12 @@
     <div class="info-tabs">
        <div class="container">
 
-             <div class="col-md-4 info-tab">
+             <div class="col-md-4 info-tab" style="border-right:1px solid #c3c3c3">
 
 					<legend>Related</legend>
 					<div class="childrenInfo">
 						<a href="#"><li id="childrenList"></li></a>
-					</div>
+					</div><br>
 
             </div>
 
@@ -83,16 +81,16 @@
 					<legend>Tags</legend>
 					<div class="tagInfo">
 						<a href="#"><li id="tagList"></li></a>						
-					</div>
+					</div><br>
 
             </div>
 
-             <div class="col-md-4 info-tab">  
+             <div class="col-md-4 info-tab" style="border-left:1px solid #c3c3c3">  
 
 					<legend>Categories</legend>
 					<div class="categoryInfo">
 						<a href="#"><li id="categoryList"></li></a>
-					</div>
+					</div><br>
 
             </div>
 
@@ -103,7 +101,7 @@
     <div class="footer">
 	  <div class="container">
 		<div class="row">
-	      <div class="col-md-4">
+	      <!--<div class="col-md-4">
 			<h3>About</h3>
 			<p>We are awesome, check our stuff out.</p>
 
@@ -127,7 +125,7 @@
 				<li><a href="#">Feedback</a></li>
 				</ul>
 		  </div>
-		  
+		  -->
 	    </div>
 		<p style="float:left">&copy; DBC NoteSter 2015</p>
 	  </div>
