@@ -78,6 +78,10 @@ li{
 	box-shadow: 1px 1px 10px grey;
 }
 
+.panel #voteCount{
+	text-align: center;
+}
+
 .panel-body{
 	height: 150px;
 }
@@ -89,6 +93,11 @@ li{
 
 .authorName{
 	font-size: 18px;
+}
+
+.panel button{
+	background: transparent;
+	border: none;
 }
 
 .desc {
