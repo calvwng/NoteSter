@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css">
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
     <link rel="stylesheet" href="main.css">
-    
+
   </head>
 
   <body>
@@ -22,7 +22,7 @@
 
     <div class="jumbotron">
       <div class="container">
-        <h1>Results for $query</h1>
+        <h1>NoteSter</h1>
       </div>
     </div>
 	<div class = "container">
@@ -30,7 +30,7 @@
         <div class = "container">
 			<ul id="list"></ul>
 			<script>
-			$(document).ready(function() {     
+			$(document).ready(function() {
 				$.getJSON( "test.json", function( data ) {
 					$.each( data, function( key, val ) {
 						$('#list').append(
@@ -44,11 +44,11 @@
 				});
 			});
 			</script>
-            
+
 			<!--<ul>
 			<li><a id = "resourceTitle" href = # class = "title col-md-4">Resource 1</a></li>
 			<div class = "upDownVote col-md-2"><div id = "voteCount" class = "tally ">10</div>
-			
+
 				<a id = "upVoteButton" href = "#">
 					<span class = "glyphicon glyphicon-thumbs-up thumb upDownVote" aria-hidden="true"></span>
 					</a>
@@ -57,7 +57,7 @@
 				</a>
 				<li><a href="#" class = "authorName">Author</a></li>
 			</div>
-			
+
 			<p class = col-md-12>Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Sure would be rad if you read the rest of this resource...</p>
 			<a href="#" class = "col-md-2">Read More</a>
             </ul>-->
