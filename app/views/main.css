@@ -31,3 +31,7 @@ ul{
 .authorName{
 	font-size: 18px;
 }
+
+.desc {
+	text-align: left;
+}
