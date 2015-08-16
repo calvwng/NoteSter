@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset='utf-8'>
+
+	<title>NoteSter</title>
+    
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <link rel="stylesheet" href="css/application.css">
+	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="jquery.jscrollpane.css" />
+    <script type="text/javascript" src="jquery.jscrollpane.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+
+	<script >
+		$(document).ready(function() { 
+	
+			/*if (!$.browser.webkit) {
+				$('.jumbotron').jScrollPane();
+			}*/
+			
+			$.getJSON( "js/test.json", function( data ) {
+				$.each( data, function( key, val ) {
+					
+					$('#childrenList').append("<li><a href=\"#\">" + val.title +"</a></li>" );
+					$('#tagList').append("<a href=\"#\">#" + val.title +"  </a>" );
+					$('#categoryList').append("<li><a href=\"#\">" + val.title +"</a></li>" );
+				});
+			});
+
+			$.getJSON( "js/note.json", function( data ) {
+				$.each( data, function( key, val ) {
+					$('#noteTitle').append( val.title );
+					$('#noteDescription').append( val.description  );
+				});
+			});
+			
+		});
+
+	</script>
+
+    
+  </head>
+
+  <body>
+	<div class="nav">
+      <div class="container">
+        <ul class="pull-left">
+          <li><a href="index.html"><img class="logo-img" src="images/NoteStrIcon2.png"></a></li>
+          <li><input class="input-box" id="name" placeholder="  Search notes" style="margin-left:50px"></li>
+          <li><button style="margin-left:5px" type="button" class="btn">GO</li>
+          
+        
+        </ul>
+        
+      </div>
+    </div>
+	
+	
+	<div class="jumbotron" >
+			<div class="container">
+			<h1 id="noteTitle"></h1>
+			<p id="noteDescription"></p>
+			
+		  </div>
+		
+	 </div>
+	
+    <div class="info-tabs">
+       <div class="container">
+
+             <div class="col-md-4 info-tab" style="border-right:1px solid #c3c3c3">
+
+					<legend>Related</legend>
+					<div class="childrenInfo">
+						<li id="childrenList"></li>
+					</div><br>
+
+            </div>
+
+             <div class="col-md-4 info-tab">
+
+					<legend>Tags</legend>
+					<div class="tagInfo">
+						<li id="tagList"></li>						
+					</div><br>
+
+            </div>
+
+             <div class="col-md-4 info-tab" style="border-left:1px solid #c3c3c3">  
+
+					<legend>Categories</legend>
+					<div class="categoryInfo">
+						<li id="categoryList"></li>
+					</div><br>
+
+            </div>
+
+      </div>
+        
+    </div>
+    
+    <div class="footer">
+	  <div class="container">
+		<div class="row">
+	      <!--<div class="col-md-4">
+			<h3>About</h3>
+			<p>We are awesome, check our stuff out.</p>
+
+	      </div>
+		  <div class="col-md-4">
+			<h3> Connect</h3>
+			<ul >
+				<li class="social-link"><a href="https://twitter.com"><img class="social-icon" src="images/twitter.png" >Twitter</a></li>
+				<li class="social-link"><a href="https://www.linkedin.com"><img class="social-icon" src="images/linkedin.png" >LinkedIn</a></li>
+				<li class="social-link"><a href="https://facebook.com"><img class="social-icon" src="images/facebook.png" >Facebook</a></li>
+				
+			</ul>
+				
+		   </div>
+
+		  <div class="col-md-4">
+			<h3> Help</h3>
+			<ul >
+				<li><a href="#">Contact us</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Feedback</a></li>
+				</ul>
+		  </div>
+		  -->
+	    </div>
+		<p style="float:left">&copy; DBC NoteSter 2015</p>
+	  </div>
+	</div>
+	
+	
+  </body>
+</html>
