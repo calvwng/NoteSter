@@ -3,6 +3,8 @@ class CreateRelations < ActiveRecord::Migration
      create_table :relations do |t|
       t.references :child
       t.references :parent
+      # t.integer :parent
+      # t.integer :child
     end
   end
 end
