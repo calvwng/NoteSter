@@ -25,9 +25,9 @@
 			$.getJSON( "js/test.json", function( data ) {
 				$.each( data, function( key, val ) {
 					
-					$('#childrenList').append("<li>" + val.title +"</li>" );
-					$('#tagList').append("#" + val.title +" " );
-					$('#categoryList').append("<li>" + val.title +"</li>" );
+					$('#childrenList').append("<li><a href=\"#\">" + val.title +"</a></li>" );
+					$('#tagList').append("<a href=\"#\">#" + val.title +"  </a>" );
+					$('#categoryList').append("<li><a href=\"#\">" + val.title +"</a></li>" );
 				});
 			});
 
@@ -76,7 +76,7 @@
 
 					<legend>Related</legend>
 					<div class="childrenInfo">
-						<a href="#"><li id="childrenList"></li></a>
+						<li id="childrenList"></li>
 					</div><br>
 
             </div>
@@ -85,7 +85,7 @@
 
 					<legend>Tags</legend>
 					<div class="tagInfo">
-						<a href="#"><li id="tagList"></li></a>						
+						<li id="tagList"></li>						
 					</div><br>
 
             </div>
@@ -94,7 +94,7 @@
 
 					<legend>Categories</legend>
 					<div class="categoryInfo">
-						<a href="#"><li id="categoryList"></li></a>
+						<li id="categoryList"></li>
 					</div><br>
 
             </div>
