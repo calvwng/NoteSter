@@ -8,11 +8,20 @@
     
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
     <link rel="stylesheet" href="css/application.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	
+	<link rel="stylesheet" type="text/css" href="jquery.jscrollpane.css" />
+    <script type="text/javascript" src="jquery.jscrollpane.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+
 	<script >
-		$(document).ready(function() {     
+		$(document).ready(function() { 
+	
+			/*if (!$.browser.webkit) {
+				$('.jumbotron').jScrollPane();
+			}*/
+			
 			$.getJSON( "js/test.json", function( data ) {
 				$.each( data, function( key, val ) {
 					
@@ -28,14 +37,11 @@
 					$('#noteDescription').append( val.description  );
 				});
 			});
+			
 		});
-		/*$('#jumbotron, #scrollbar').enscroll({
-			showOnHover: false,
-			verticalTrackClass: 'track3',
-			verticalHandleClass: 'handle3'
-		});*/
 
 	</script>
+
     
   </head>
 
@@ -43,7 +49,7 @@
 	<div class="nav">
       <div class="container">
         <ul class="pull-left">
-          <li><a href="index.html"><img class="logo-img" src="images/NoteStrIcon.png"></a></li>
+          <li><a href="index.html"><img class="logo-img" src="images/NoteStrIcon2.png"></a></li>
           <li><input class="input-box" id="name" placeholder="  Search notes" style="margin-left:50px"></li>
           <li><button style="margin-left:5px" type="button" class="btn">GO</li>
           
@@ -55,7 +61,6 @@
 	
 	
 	<div class="jumbotron" >
-		<!--<div id="scrollbar"></div>-->
 			<div class="container">
 			<h1 id="noteTitle"></h1>
 			<p id="noteDescription"></p>

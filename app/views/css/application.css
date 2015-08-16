@@ -1,16 +1,10 @@
 .nav{
 	padding-top:10px;
 }
-.nav a, .nav .open>a, .nav .open>a:hover, .nav .open>a:focus{
-  color: #5a5a5a;
-  font-size: 11px;
-  font-weight: bold;
+
+.nav a{
   padding: 14px 10px;
-  text-transform: uppercase;
-  display: inline;
-  border: none;
-  outline:none;
-  background-color:#ffffff;
+  
 }
 .nav ul{
 	padding-bottom:0;
@@ -19,10 +13,6 @@
 
 .nav li {
   display: inline;
-}
-
-.dropdown{
- display: inline;
 }
 
 .header{
@@ -64,8 +54,8 @@
 	height: 400px;
 	border: 0px solid #3399cc;
 	border-radius: 10px;
-	
-	overflow-y: scroll; 
+	overflow-y: scroll;
+	scrollbar-face-color: #fff;
 }
 
 .jumbotron .container {
@@ -159,47 +149,26 @@ div .inline{
 	
 }
 
-a.fancybox img {
-    border: none;
-	/*box-shadow: 0 1px 7px rgba(0,0,0,0.6);*/
-	-o-transform: scale(1,1); -ms-transform: scale(1,1); -moz-transform: scale(1,1); -webkit-transform: scale(1,1); 
-	-moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; 
-	transform: scale(1,1); 
-	transition: all 0.2s ease-in-out;
+/*::-webkit-scrollbar {
+      width: 5px;
+}
+
+::-webkit-scrollbar-track {
+      background-color: #e1e1e1;
+}
+::-webkit-scrollbar-thumb {
+      background-color: #fff; 
 } 
-a.fancybox:hover img {
-    position: relative; 
-	z-index: 999;
-	-o-transform: scale(1.02,1.02); -ms-transform: scale(1.02,1.02); -moz-transform: scale(1.02,1.02); -webkit-transform: scale(1.02,1.02); 
-	transform: scale(1.02,1.02);
+ 
+.jspTrack{
+    background: #e1e1e1; 
+    position: relative;
 }
-
-.track3 {
-    width: 10px;
-    background: rgba(0, 0, 0, 0);
-    margin-right: 2px;
-    border-radius: 10px;
-    -webkit-transition: background 250ms linear;
-    transition: background 250ms linear;
-}
-
-.track3:hover,
-.track3.dragging {
-    background: #d9d9d9; 
-    background: rgba(0, 0, 0, 0.15);
-}
-
-.handle3 {
-    width: 7px;
-    right: 0;
-    background: #999;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 7px;
-    -webkit-transition: width 250ms;
-    transition: width 250ms;
-}
-
-.track3:hover .handle3,
-.track3.dragging .handle3 {
-    width: 10px;
-}
+ 
+.jspDrag{
+    background: #fff;
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}*/
