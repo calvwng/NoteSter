@@ -1,0 +1,21 @@
+[
+
+{
+"title": "title1",
+"description": "description1",
+"author": "Raplph author",
+"votes": 10
+},
+{
+"title": "title2",
+"description": "description2",
+"author": "Raplph author",
+"votes": 10
+},
+{
+"title": "title3",
+"description": "description3",
+"author": "Raplph author",
+"votes": 10
+}
+]

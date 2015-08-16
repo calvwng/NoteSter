@@ -1,0 +1,33 @@
+.glyphicon-thumbs-up{
+	color: green;
+}
+
+.glyphicon-thumbs-down{
+	color: red;
+}
+
+.tally{
+	color: #8AB800;
+	margin-bottom: 0px;
+	font-size: 20pt;
+}
+
+.thumb{
+	position: relative;
+	margin-bottom: 10px;
+	padding-top: 0px;
+}
+
+.title {
+	display: inline;
+	color: black;
+	font-size: 30px;
+	padding-top: 5 px;
+}
+
+ul{
+	list-style-type: none;
+}
+.authorName{
+	font-size: 18px;
+}
