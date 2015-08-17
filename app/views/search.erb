@@ -48,14 +48,17 @@
    <script>
 $(document).ready(function() {
   $.getJSON( "http://localhost:9393/query", function( data ) {
-    $.each( data, function( key, val ) {
+    console.log(data)
+    array = data.array_of_resources[0].concat(data.array_of_resources[1] )
+
+    $.each( array, function( key, val ) {
       $('#list').append(
         '<li>\
               <div id=\"card' + val.id + '\" class="panel">\
                           <div class="panel-heading">\
                                 <div id="headerText" class="pull-left">\
                                       <h3 class="title">' + val.title + '</h3>\
-                                      <h6><a href="#" class="authorName">' + val.author + '</a></h6>\
+                                      <h6><a href="#" class="authorName">' + val.title + '</a></h6>\
                                 </div>\
                                 <div class="upDownVote pull-right">\
                                             <div id = "voteCount" class = "tally ">' + val.votes + '</div>\
