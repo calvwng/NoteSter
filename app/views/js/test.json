@@ -1,15 +1,18 @@
 [
     
     {
-        "title": "title1",
-        "description": "description1"
+        "related": "Related resource 1",
+		"tag": "tag1",
+		"cat": "Category 1"
     },
 	{
-        "title": "title2",
-        "description": "description2"
+        "related": "Related resource 2",
+		"tag": "tag2",
+		"cat": "Category 2"
     },
     {
-        "title": "title3",
-        "description": "description3"
+        "related": "Related resource 3",
+		"tag": "tag3",
+		"cat": "Category 3"
     }
 ]
