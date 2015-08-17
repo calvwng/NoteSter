@@ -11,23 +11,16 @@
 	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	
-	<link rel="stylesheet" type="text/css" href="jquery.jscrollpane.css" />
-    <script type="text/javascript" src="jquery.jscrollpane.min.js"></script>
-	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
 
 	<script >
 		$(document).ready(function() { 
-	
-			/*if (!$.browser.webkit) {
-				$('.jumbotron').jScrollPane();
-			}*/
 			
 			$.getJSON( "js/test.json", function( data ) {
 				$.each( data, function( key, val ) {
 					
-					$('#childrenList').append("<li><a href=\"#\">" + val.title +"</a></li>" );
-					$('#tagList').append("<a href=\"#\">#" + val.title +"  </a>" );
-					$('#categoryList').append("<li><a href=\"#\">" + val.title +"</a></li>" );
+					$('#childrenList').append("<li><a href=\"#\">" + val.related +"</a></li>" );
+					$('#tagList').append("<a href=\"#\">#" + val.tag +"  </a>" );
+					$('#categoryList').append("<li><a href=\"#\">" + val.cat +"</a></li>" );
 				});
 			});
 
@@ -51,7 +44,7 @@
         <ul class="pull-left">
           <li><a href="index.html"><img class="logo-img" src="images/NoteStrIcon2.png"></a></li>
           <li><input class="input-box" id="name" placeholder="  Search notes" style="margin-left:50px"></li>
-          <li><button style="margin-left:5px" type="button" class="btn">GO</li>
+          <li><button style="margin-left:5px" type="button" class="btn" >GO</button></li>
           
         
         </ul>
