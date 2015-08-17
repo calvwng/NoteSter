@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$.getJSON( "test.json", function( data ) {
+	$.getJSON( "js/test.json", function( data ) {
 		$.each( data, function( key, val ) {
 			$('#list').append(
 				'<li>\
