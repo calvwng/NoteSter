@@ -1,0 +1,123 @@
+
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css">
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <link rel="stylesheet" href="css\main.css">
+
+
+
+  <div class="nav">
+      <div class="container">
+        <ul class="pull-left">
+          <li><a href="index.html"><img class="logo-img" src="images/NoteStrIcon.png"></a></li>
+          <li><input class="input-box" id="name" placeholder="  Search notes" style="margin-left:50px"></li>
+          <li><button style="margin-left:5px" type="submit" class="btn" formaction="#" >GO</button></li>
+
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Search Results</h1>
+      </div>
+    </div>
+     <div class = "container">
+                <ul id="list"></ul>
+                <!--<ul>
+                <li><a id = "resourceTitle" href = # class = "title col-md-4">Resource 1</a></li>
+                <div class = "upDownVote col-md-2"><div id = "voteCount" class = "tally ">10</div>
+
+                  <a id = "upVoteButton" href = "#">
+                    <span class = "glyphicon glyphicon-thumbs-up thumb upDownVote" aria-hidden="true"></span>
+                    </a>
+                  <a id = "downVoteButton" href = "#">
+                    <span class = "glyphicon glyphicon-thumbs-down thumb upDownVote" aria-hidden="true"></span>
+                  </a>
+                  <li><a href="#" class = "authorName">Author</a></li>
+                </div>
+
+                <p class = col-md-12>Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Sure would be rad if you read the rest of this resource...</p>
+                <a href="#" class = "col-md-2">Read More</a>
+                      </ul>-->
+     </div>
+
+   <script>
+$(document).ready(function() {
+  $.getJSON( "http://localhost:9393/query", function( data ) {
+    $.each( data, function( key, val ) {
+      $('#list').append(
+        '<li>\
+              <div id=\"card' + val.id + '\" class="panel">\
+                          <div class="panel-heading">\
+                                <div id="headerText" class="pull-left">\
+                                      <h3 class="title">' + val.title + '</h3>\
+                                      <h6><a href="#" class="authorName">' + val.author + '</a></h6>\
+                                </div>\
+                                <div class="upDownVote pull-right">\
+                                            <div id = "voteCount" class = "tally ">' + val.votes + '</div>\
+                                            <button id = "upVoteButton">' +
+                                                  '<span class = "glyphicon glyphicon-thumbs-up thumb upDownVote" aria-hidden="true"> </span>\
+                                            </button>\
+                                            <button id = downVoteButton>\
+                                            <span class = "glyphicon glyphicon-thumbs-down thumb upDownVote" aria-hidden="true"></span>\
+                                            </button>\
+                                </div>\
+                          </div>\
+                          <div class="panel-body">\
+                                <p class = "col-sm-10 desc pull-left">'+ val.description.slice(0,255) +'...<a href="/cards/#{'+val.id+'}" class = "">Read More</a></p>\
+                          </div>\
+              </div>\
+        </li>'
+      );
+
+
+      //begin event handler
+      var voteContainer = $("#card" + val.id).find(".upDownVote");
+
+      //var isUp = false;
+      //var isDown = false;
+
+      voteContainer.find("#upVoteButton").click(function(evt){
+        var btn = evt.currentTarget; // the clicked button
+        console.log("up:" + evt.currentTarget);
+
+        /*
+        if(!isUp){
+        val.votes++;
+        isUp = true;
+        }
+        else{
+        val.votes--;
+        isUp = false;
+        }
+        $("#voteCount").text(val.votes);
+        */
+      });
+
+      voteContainer.find("#downVoteButton").click(function(evt){
+        var btn = evt.currentTarget; // the clicked button
+        console.log("down:" + evt.currentTarget);
+
+        /*
+        if(!isDown){
+        val.votes--;
+        isDown = true;
+        }
+        else{
+        val.votes++;
+        isDown = false;
+        }
+        $("#voteCount").text(val.votes);
+        */
+      });
+    });
+  });
+
+});
+
+   </script>
+

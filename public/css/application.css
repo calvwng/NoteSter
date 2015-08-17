@@ -1,0 +1,304 @@
+.logo-img{
+  background: url('/images/NoteStrIcon2.png');
+  /*background-color:red;
+  width:10px;
+  height:10px;*/
+}
+
+.nav{
+  padding-top:10px;
+}
+
+.nav a{
+  padding: 14px 10px;
+
+}
+.nav ul{
+  padding-bottom:0;
+  padding-top:3px;
+}
+
+.nav li {
+  display: inline;
+}
+
+.header{
+  background-color: #f7f7f7;
+  height:80px;
+  display: inline;
+}
+.logo-img{
+  width:10%;
+  height:10%;
+  display: inline-block;
+}
+.btn{
+  font-weight:bold;
+  color:#fff;
+  background-color: #3399cc;
+  overflow: hidden;
+  height:42px;
+}
+
+.btn:hover{
+  color:#fff;
+  background-color: #1f698d;
+}
+
+.input-box{
+  padding: 9px;
+  border: 2px solid #3399cc;
+  border-radius: 5px;
+  width: 700px;
+  font-size:14px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.note-display{
+  width:100%;
+  height:300px;
+  background-color:#3399cc;
+  clear:both;
+}
+.jumbotron{
+  background-color:#3399cc;
+  height: 400px;
+  border: 0px solid #3399cc;
+  border-radius: 10px;
+  overflow-y: scroll;
+  scrollbar-face-color: #fff;
+}
+
+.jumbotron .container {
+  background-color: #3399cc;
+
+  position: relative;
+  margin-bottom:15px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+
+#scrollbar{
+  overflow: auto;
+}
+.info-tab{}
+
+.info-tabs{
+    background-color: #efefef;
+    border-bottom: 1px solid #dbdbdb;
+  height:20%;
+}
+
+.info-tabs h2{
+    color: #393c3d;
+    font-size: 24px;
+}
+
+.info-tabs p{
+    font-size: 15px;
+    margin-bottom: 13px;
+}
+.info-tabs {
+  /*border: 2px solid #787676;*/
+
+}
+legend{
+  margin-top:10px;
+  margin-bottom:5px;
+}
+
+.footer {
+  background-color: #f7f7f7;
+}
+
+.footer h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.thumbnail img, .social-icon{
+  transition: transform 0.3s ease-in-out;
+}
+
+.thumbnail img:hover, .social-icon img:hover {
+    transform: scale(0.95);
+}
+
+
+#childrenList, #tagList, #categoryList, ul{
+  list-style-type: none;
+  padding: 0;
+  display: table;
+}
+
+.social-icons li{
+
+}
+
+.social-icon{
+  width:24px;
+  height:24px;
+  margin-right:5px;
+  margin-bottom:5px;
+
+}
+
+div .inline{
+  display: inline-block;
+
+}
+
+.logo-img{
+  /*background: url('../images/NoteStrIcon2.png');*/
+/*  background-color:red;
+  width:10px;
+  height:10px;*/
+}
+
+/*::-webkit-scrollbar {
+      width: 5px;
+}
+
+::-webkit-scrollbar-track {
+      background-color: #e1e1e1;
+}
+::-webkit-scrollbar-thumb {
+      background-color: #fff;
+}
+
+.jspTrack{
+    background: #e1e1e1;
+    position: relative;
+}
+
+.jspDrag{
+    background: #fff;
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}*/
+
+.glyphicon-thumbs-up{
+  color: green;
+}
+
+.glyphicon-thumbs-down{
+  color: red;
+}
+
+.tally{
+/*  color: #8AB800; */
+  margin-bottom: 0px;
+  font-size: 20pt;
+}
+
+.nav{
+  padding-top:10px;
+}
+
+
+.nav li {
+  display: inline;
+}
+
+.jumbotron{
+background-color:#3399cc !important;
+color: #fff !important;
+border: 0px solid #3399cc;
+border-radius: 10px;
+}
+
+.logo-img{
+  width:10%;
+  height:10%;
+  display: inline-block;
+}
+.btn{
+  font-weight:bold;
+  color:#fff;
+  background-color: #3399cc;
+  overflow: hidden;
+  height:42px;
+}
+
+.btn:hover{
+color:#fff;
+background-color: #1f698d;
+}
+
+.input-box{
+  padding: 9px;
+  border: 2px solid #3399cc;
+  border-radius: 5px;
+  width: 700px;
+  font-size:14px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.thumb{
+  position: relative;
+  margin-bottom: 10px;
+  padding-top: 0px;
+}
+
+.title {
+  display: inline;
+  color: black;
+  font-size: 30px;
+  padding-top: 5 px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+li{
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.panel{
+/*   border: 1px solid black; */
+  box-shadow: 1px 1px 10px grey;
+}
+
+.panel #voteCount{
+  text-align: center;
+}
+
+.panel-body{
+  height: 150px;
+}
+
+.panel-heading{
+  background-color: #f1c40f;
+  height: 88px;
+}
+
+.authorName{
+  font-size: 18px;
+}
+
+.panel button{
+  background: transparent;
+  border: none;
+}
+
+.desc {
+  text-align: left;
+}

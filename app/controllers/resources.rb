@@ -17,8 +17,14 @@ get '/' do
   return response.to_json
 end
 
+get '/home' do
+ erb :"/index"
+end
 
-post '/search' do
+get '/search' do
+  erb :"/search"
+end
+post '/query' do
   tags = params[:tags]
   p '*'*100
   p params
