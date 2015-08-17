@@ -1,0 +1,110 @@
+.glyphicon-thumbs-up{
+	color: green;
+}
+
+.glyphicon-thumbs-down{
+	color: red;
+}
+
+.tally{
+/* 	color: #8AB800; */
+	margin-bottom: 0px;
+	font-size: 20pt;
+}
+
+.nav{
+	padding-top:10px;
+}
+
+
+.nav li {
+  display: inline;
+}
+
+.jumbotron{
+background-color:#3399cc !important;
+color: #fff !important;
+border: 0px solid #3399cc;
+border-radius: 10px;
+}
+
+.logo-img{
+	width:10%;
+	height:10%;
+	display: inline-block;
+}
+.btn{
+	font-weight:bold;
+	color:#fff;
+	background-color: #3399cc;	
+	overflow: hidden;
+	height:42px;
+}
+
+.btn:hover{
+color:#fff;
+background-color: #1f698d; 
+}
+
+.input-box{
+	padding: 9px;
+	border: 2px solid #3399cc;
+	border-radius: 5px;
+	width: 700px;
+	font-size:14px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.thumb{
+	position: relative;
+	margin-bottom: 10px;
+	padding-top: 0px;
+}
+
+.title {
+	display: inline;
+	color: black;
+	font-size: 30px;
+	padding-top: 5 px;
+}
+
+ul{
+	list-style-type: none;
+}
+
+li{
+	margin-bottom: 50px;
+	margin-top: 30px;
+}
+
+.panel{
+/*   border: 1px solid black; */
+	box-shadow: 1px 1px 10px grey;
+}
+
+.panel #voteCount{
+	text-align: center;
+}
+
+.panel-body{
+	height: 150px;
+}
+
+.panel-heading{
+	background-color: #f1c40f;
+	height: 88px;
+}
+
+.authorName{
+	font-size: 18px;
+}
+
+.panel button{
+	background: transparent;
+	border: none;
+}
+
+.desc {
+	text-align: left;
+}

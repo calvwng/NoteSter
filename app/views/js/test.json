@@ -1,18 +1,32 @@
 [
-    
     {
+		"id": 1,
         "related": "Related resource 1",
 		"tag": "tag1",
-		"cat": "Category 1"
+		"cat": "Category 1",
+		"votes": 10,
+		"title": "title title title1",
+		"description": "Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Sure would be rad if you read the rest of this resource...",
+		"author": "Raplph author"
     },
 	{
+		"id": 2,
         "related": "Related resource 2",
 		"tag": "tag2",
-		"cat": "Category 2"
+		"cat": "Category 2",
+		"votes": 5,
+		"title": "title title title1",
+		"description": "Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Sure would be rad if you read the rest of this resource...",
+		"author": "Rebecca author"		
     },
     {
+		"id": 3,
         "related": "Related resource 3",
 		"tag": "tag3",
-		"cat": "Category 3"
+		"cat": "Category 3",
+		"votes": 2,
+		"title": "title title title1",
+		"description": "Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Aavi eiqvqn eqivqjqe. Thoenqv eiqnd eqoov qqkedas wqow, winvqo! fwqifqncqei qcieqncqi qicq cqirpq cowq cwoq. Sure would be rad if you read the rest of this resource...",
+		"author": "Bob author"		
     }
 ]
